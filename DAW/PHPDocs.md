@@ -16,7 +16,15 @@ git config --global user.name "Tu Nombre"
 git config --global user.email "tu@email.com"
 ```
 
-##
+## 2. Crear un nuevo repositorio en GitHub
+
+Explicaremos como realizarlo con diferentes imagener:
+
+1. Accedemos a nuestro perfil: 
+
+  `![Perfil de GitHub](/home/eracres/Imágenes/1.png)`
+    
+2. 
 
 ##
 
