@@ -22,7 +22,7 @@ Explicaremos como realizarlo con diferentes imagener:
 
 1. Accedemos a nuestro perfil:  
 
-![Texto alternativo](1.png)
+![Texto alternativo](././Imagenes/1.png)
     
 2. 
 
