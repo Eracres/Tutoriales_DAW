@@ -22,7 +22,7 @@ Explicaremos como realizarlo con diferentes imagener:
 
 1. Accedemos a nuestro perfil:  
 
-![Gato jugando](imagenes/1.png)
+![Gato jugando](../Imagenes/1.png)
     
 2. 
 
