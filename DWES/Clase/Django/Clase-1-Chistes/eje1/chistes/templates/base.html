@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{% block title %} {% block title %}</h1>
+    <div>
+        {{ for chiste in objetc_list }}
+        <div>
+            <h5>{{chiste.titulo}}  ({{chiste.adulto}})</h5>
+            <p>{{chiste.cuerpo}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

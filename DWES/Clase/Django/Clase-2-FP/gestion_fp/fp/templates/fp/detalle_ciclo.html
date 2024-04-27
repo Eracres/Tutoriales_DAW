@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles del Ciclo</title>
+</head>
+<body>
+    <h1>{{ familia.nombre }}</h1>
+    <h2>Ciclos</h2>
+    <ul>
+        {% for ciclo in ciclos %}
+            <li>{{ ciclo.nombre }} - {{ ciclo.descripcion }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

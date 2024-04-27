@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Meses</title>
+</head>
+<body>
+    <h1>Selecciona un mes:</h1>
+    <ul>
+        {% for month in months %}
+            <li><a href="{% url 'products_by_month' forloop.counter0 %}">{{ month }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
