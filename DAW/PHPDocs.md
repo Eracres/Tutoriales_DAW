@@ -20,7 +20,7 @@ git config --global user.email "tu@email.com"
 
 Explicaremos como realizarlo con diferentes imagener:
 
-1. Accedemos a nuestro perfil:  
+1. Accedemos a nuestro perfil pulsando nuestro icono en la esquina superior derecha y seleccionamos "Your repositories":  
 
 ![Gato jugando](../Imagenes/1.png)
     
