@@ -22,7 +22,7 @@ Explicaremos como realizarlo con diferentes imagener:
 
 1. Accedemos a nuestro perfil:  
 
-  `![Perfil de GitHub](Imágenes/1.png)`
+  `Imágenes/1.png`
     
 2. 
 
