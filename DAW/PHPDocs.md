@@ -22,7 +22,7 @@ Explicaremos como realizarlo con diferentes imagener:
 
 1. Accedemos a nuestro perfil pulsando nuestro icono en la esquina superior derecha y seleccionamos "Your repositories":  
 
-![Gato jugando](../Imagenes/1.png)
+![Mi perfil](../Imagenes/1.png)
     
 2. 
 
