@@ -22,7 +22,7 @@ Explicaremos como realizarlo con diferentes imagener:
 
 1. Accedemos a nuestro perfil:  
 
-  !(./Imágenes/1.png)
+  ./Imágenes/1.png
     
 2. 
 
