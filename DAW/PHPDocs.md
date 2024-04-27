@@ -1,4 +1,4 @@
-#PHPDocs
+# PHPDocs: Instalacion 
 
 En caso de no tener GitHub ni Git debes realizar lo siguiente:
 
