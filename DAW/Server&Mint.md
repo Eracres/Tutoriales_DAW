@@ -30,5 +30,9 @@ Panel de control\Redes e Internet\Conexiones de red, donde tiene que aparecer lo
 Seleccionaremos la opción de VirtualBox que sera con quien hagamos la interconexión, esto dependerá con que sofware cargues 
 las máquinas virtuales, pulsaremos el botón derecho del ratón e iremos a "Propiedades" donde nos aparecerá lo siguiente:
 
-![Propiedades](../Imagenes/7.png) --> Seleccionamos la opcion TCP/IPv4 --> ![TCP/IPv4](../Imagenes/8.png)
+<p align="center">
+  <img src="../Imagenes/7.png" alt="Propiedades" width="45%" />
+  <img src="../Imagenes/8.png" alt="TCP/IPv4" width="45%" />
+</p>
+
 
