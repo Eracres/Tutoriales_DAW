@@ -36,6 +36,47 @@ Explicaremos como realizarlo con diferentes imagener:
 
 ![Mi perfil](../Imagenes/4.png)
 
-##
+## 3. Comandos de gestión del proyecto en Git
+
+* Clonar un repositorio 
+
+``` git clone <URL_del_repositorio> ```
+
+* Inicializar un repositorio de un directorio
+
+``` git init ```
+
+* Agregar cambios al area de preparacion
+
+``` git add <nombre_del_archivo> ```
+``` git add . ```
+
+* Confirmar los cambios en el repositorio
+
+``` git commit -m "Mensaje del commit" ```
+
+* Obtener cambios desde el repositorio
+
+ ``` git pull origin <nombre_de_la_rama> ``` 
+
+* Enviar cambios al repositorio
+
+``` git push origin <nombre_de_la_rama> ```
+  
+* Crear una nueva rama
+
+``` git branch <nombre_de_la_rama> ```
+
+* Cambiar de rama
+
+``` git checkout <nombre_de_la_rama> ```
+
+* Eliminar una rama
+
+``` git branch -d <nombre_de_la_rama> ```
+
+* Fusionar cambios de una rama con el main principal
+
+``` git merge mi_caracteristica ```
 
 ##
