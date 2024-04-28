@@ -48,7 +48,10 @@ Explicaremos como realizarlo con diferentes imagener:
 
 * Agregar cambios al area de preparacion
 
+Para un archivo en concreto:
 ``` git add <nombre_del_archivo> ```
+
+Para todo el repositorio:
 ``` git add . ```
 
 * Confirmar los cambios en el repositorio
