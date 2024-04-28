@@ -32,7 +32,7 @@ las máquinas virtuales, pulsaremos el botón derecho del ratón e iremos a "Pro
 
 <p align="center">
   <img src="../Imagenes/7.png" alt="Propiedades" width="45%" />
-  Seleccionamos TCP/IPv4
+  
   <img src="../Imagenes/8.png" alt="TCP/IPv4" width="45%" />
 </p>
 
