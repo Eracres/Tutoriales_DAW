@@ -6,7 +6,7 @@ Explicaremos el proceso de instalación de las diferentes herramientas necesaria
 
 ### [Git & Github](/DAW/Tutorial_Git.md)
 
-### [Preparar Ubuntu Server & Linux Mint]()
+### [Preparar Ubuntu Server & Linux Mint](/DAW/Server&Mint.md)
 
 ### [PHPDocs]()
 
