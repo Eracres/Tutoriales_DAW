@@ -36,4 +36,18 @@ las máquinas virtuales, pulsaremos el botón derecho del ratón e iremos a "Pro
   <img src="../Imagenes/8.png" alt="TCP/IPv4" width="45%" />
 </p>
 
+Seleccionamos la opción TCP/IPv4 y en ella establecemos la IP que le hemos asignado, hecho esto, tendremos configurado la primera parte.
 
+## 3. Configuración de Ubuntu Server (172.20.0.2)
+
+Lo primero de todo debemos configurar con la maquina apagada el adaptador de red, para ello cuando abrimos nuesto 
+Oracle VM VirtualBox debemos seleccionar la maquina que configuraremos y pulsar en "Configuración":
+
+![VirtualBox](../Imagenes/9.png)
+
+Dentro de configuración tenemos que dirigirnos al apartado "Red" donde veremos 4 adaptadores de los cuales solo el 1 estará 
+habilitado, por tanto, tendremos que ir al Adaptador 2, habilitarlo y configurarlo de la siguiente forma:
+
+![Conexoines](../Imagenes/10.png)
+
+Hecho esto, arrancamos la maquina virtual y asignamos las credenciales para acceder a nuestro Ubuntu Server, una vez accedido tendremos que 
