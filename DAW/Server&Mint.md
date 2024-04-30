@@ -62,7 +62,7 @@ Una vez accedido al server, tendremos que instalar OpenSSH para realizar nuestra
 apt install openssh-server
 ```
 
-### 2. Configuracion de la IP
+### 2. Configuracion de la IP y Netplan
 
 Para ello primero tenemos que verificar las IPs disponibles, para ello accedemos de la siguiente forma a las listas:
 
@@ -75,5 +75,22 @@ Identificaremos a enp0s8, y hecho esto, nos dirigiremos a modificar este fichero
 ``` 
 nano /etc/netplan/00-installer-config.yaml
  ```
+En el fichero tenemos que especificar lo que aparece en la imagen (solo variará la IP que tengais):
+
+Para finalizar esta parte tenemos que aplicar las modificaciones del fichero con este comando:
+
+```
+netplan apply
+```
+### 3. Instalación de Apache
+
+Ahora instalaremos Apache con este comando:
+
+```
+apt install apache2
+```
+Una vez instalado, queda configurar nuestra maquina de Linux Mint.
+
+## 4. Configuración de Linux Mint (172.20.0.3)
 
 
