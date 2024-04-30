@@ -40,7 +40,7 @@ las máquinas virtuales, pulsaremos el botón derecho del ratón e iremos a "Pro
 
 Seleccionamos la opción TCP/IPv4 y en ella establecemos la IP que le hemos asignado, hecho esto, tendremos configurado la primera parte.
 
-## 3. Configuración de Ubuntu Server (172.20.0.2)
+## 3. Configuración de Ubuntu Server (172.20.0.2) {#ancla}
 
 Lo primero de todo debemos configurar con la maquina apagada el adaptador de red, para ello cuando abrimos nuesto 
 Oracle VM VirtualBox debemos seleccionar la maquina que configuraremos y pulsar en "Configuración":
@@ -55,6 +55,12 @@ habilitado, por tanto, tendremos que ir al Adaptador 2, habilitarlo y configurar
 Hecho esto, arrancamos la maquina virtual y asignamos las credenciales para acceder a nuestro Ubuntu Server.
 
 ### 1. Instalamos OpenSSH
+
+Lo primero de todo es convertirnos en root:
+
+```
+sudo su
+```
 
 Una vez accedido al server, tendremos que instalar OpenSSH para realizar nuestra conexión segura, para ello se da este comando:
 
@@ -97,4 +103,6 @@ Una vez instalado, queda configurar nuestra maquina de Linux Mint.
 
 ## 4. Configuración de Linux Mint (172.20.0.3)
 
+Lo primero que tenemos que hacer, es configurar con nuestra maquina apagada el adaptador, como en el caso del server,
+por tanto, se debe repetir lo visto anteriormente [Configuracion Adaptador](#ancla)
 
