@@ -104,5 +104,5 @@ Una vez instalado, queda configurar nuestra maquina de Linux Mint.
 ## 4. Configuración de Linux Mint (172.20.0.3)
 
 Lo primero que tenemos que hacer, es configurar con nuestra maquina apagada el adaptador, como en el caso del server,
-por tanto, se debe repetir lo visto anteriormente [Configuracion Adaptador](#ancla)
+por tanto, se debe repetir lo visto anteriormente [Configuración Adaptador](#ancla)
 
