@@ -106,3 +106,4 @@ Una vez instalado, queda configurar nuestra maquina de Linux Mint.
 Lo primero que tenemos que hacer, es configurar con nuestra maquina apagada el adaptador, como en el caso del server,
 por tanto, se debe repetir lo visto anteriormente [Configuración Adaptador](#ancla)
 
+A continuación es muy sencillo, solo tenemos que acceder al apartado de configuracion y configurar la última IP de nuestro triangulo:
