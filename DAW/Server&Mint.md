@@ -50,4 +50,22 @@ habilitado, por tanto, tendremos que ir al Adaptador 2, habilitarlo y configurar
 
 ![Conexoines](../Imagenes/10.png)
 
-Hecho esto, arrancamos la maquina virtual y asignamos las credenciales para acceder a nuestro Ubuntu Server, una vez accedido tendremos que 
+Hecho esto, arrancamos la maquina virtual y asignamos las credenciales para acceder a nuestro Ubuntu Server.
+
+### 1. Instalamos OpenSSH
+
+Una vez accedido al server, tendremos que instalar OpenSSH para realizar nuestra conexión segura, para ello se da este comando:
+
+``` apt install openssh-server ```
+
+### 2. Configuracion de la IP
+
+Para ello primero tenemos que verificar las IPs disponibles, para ello accedemos de la siguiente forma a las listas:
+
+``` ip a ```
+
+Identificaremos a enp0s8, y hecho esto, nos dirigiremos a modificar este fichero:
+
+``` nano /etc/netplan/00-installer-config.yaml ```
+
+
