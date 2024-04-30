@@ -58,16 +58,22 @@ Hecho esto, arrancamos la maquina virtual y asignamos las credenciales para acce
 
 Una vez accedido al server, tendremos que instalar OpenSSH para realizar nuestra conexión segura, para ello se da este comando:
 
-``` apt install openssh-server ```
+```
+apt install openssh-server
+```
 
 ### 2. Configuracion de la IP
 
 Para ello primero tenemos que verificar las IPs disponibles, para ello accedemos de la siguiente forma a las listas:
 
-``` ip a ```
+```
+ip a
+```
 
 Identificaremos a enp0s8, y hecho esto, nos dirigiremos a modificar este fichero:
 
-``` nano /etc/netplan/00-installer-config.yaml ```
+``` 
+nano /etc/netplan/00-installer-config.yaml
+ ```
 
 
