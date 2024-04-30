@@ -13,7 +13,9 @@ Para ello tendremos que configurarlo de la siguiente forma:
 Las IP's de nuestros equipos corresponderan de la siguiente forma:
 
 Windows       --> 172.20.0.1
+
 Ubuntu Server --> 172.20.0.2
+
 Linux Mint    --> 172.20.0.3
 
 Ahora verificaremos paso a paso la configuración de cada uno de los equipos.
