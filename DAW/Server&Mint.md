@@ -70,12 +70,16 @@ Para ello primero tenemos que verificar las IPs disponibles, para ello accedemos
 ip a
 ```
 
+![IP Server](../Imagenes/11.png)
+
 Identificaremos a enp0s8, y hecho esto, nos dirigiremos a modificar este fichero:
 
 ``` 
 nano /etc/netplan/00-installer-config.yaml
  ```
 En el fichero tenemos que especificar lo que aparece en la imagen (solo variará la IP que tengais):
+
+![00-installer-config](../Imagenes/12.png)
 
 Para finalizar esta parte tenemos que aplicar las modificaciones del fichero con este comando:
 
