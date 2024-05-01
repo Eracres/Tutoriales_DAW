@@ -22,7 +22,7 @@ Seguidamente accedemos a mysql para crear la BB.DD:
 mysql
 ```
 
-![Base de datos](../../../Imagenes/BD1.png)
+![Base de datos](../../Imagenes/BD1.png)
 
 Una vez dentro de la misma, crearemos nuestra BB.DD, el usuario para la gestion de la misma y los permisos de acceso,
 en este caso, vamos a llamar a nuestra BB.DD 'botanica', para evitar que se nos olvide daremos el mismo nombre de usuario
@@ -43,7 +43,7 @@ mysql -u botanica -p botanica
 
 De estar todo correcto, tendremos esta pantalla:
 
-![Base de datos](../../../Imagenes/BD2.png)
+![Base de datos](../../Imagenes/BD2.png)
 
 ## 3. Cargamos la BB.DD
 
@@ -64,13 +64,13 @@ Para comprobar que ha funcionado nuestra carga, solo tenemos que volver a accede
     ```
     show tables;
     ```
-![Base de datos](../../../Imagenes/BD3.png)
+![Base de datos](../../Imagenes/BD3.png)
  
 ### * Acceso a la BB.DD:
     ```
     SELECT * FROM botanica; 
     ```
-![Base de datos](../../../Imagenes/BD4.png)
+![Base de datos](../../Imagenes/BD4.png)
 
 ## 4. Creamos fichero de enlace a la BB.DD
 
