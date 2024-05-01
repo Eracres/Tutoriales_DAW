@@ -57,20 +57,19 @@ mysql -u botanica -p botanica < db.sql
 Para comprobar que ha funcionado nuestra carga, solo tenemos que volver a acceder a nuestra BB.DD y que muestre nuestra tabla:
 
 ### * Acceso a la BB.DD:
-    ```
+```
     mysql -u botanica -p botanica 
-    ```
+```
 ### * Mostrar las tablas:
-    ```
+```
     show tables;
-    ```
+```
 ![Base de datos](../../Imagenes/BD3.png)
  
 ### * Acceso a la BB.DD:
-    ```
-    SELECT * FROM botanica; 
-    
-    ```
+```
+    SELECT * FROM botanica;
+```
 ![Base de datos](../../Imagenes/BD4.png)
 
 ## 4. Creamos fichero de enlace a la BB.DD
