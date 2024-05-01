@@ -1,6 +1,7 @@
 <?php
 
-include('db.php');
+require('db.php');
+require('config.php');
 
 $select = $db->prepare("SELECT * FROM botanica");
 $select->execute();
@@ -19,6 +20,29 @@ echo "</pre>";
     <title>Document</title>
 </head>
 <body>
-    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha</th>
+                <th>Lugar</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($rows as $row):?>
+                <tr>
+                    <td><?=$row['id']?></td>
+                    <td><?=$row['fecha']?></td>
+                    <td><?=$row['lugar']?></td>
+                    <td><?=$row['nombre']?></td>
+                    <td><?=$row['descripcion']?></td>
+                    <td><img src="<?=$row['foto']?>" alt=""></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 </body>
 </html>
