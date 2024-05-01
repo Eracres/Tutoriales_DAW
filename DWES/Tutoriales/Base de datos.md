@@ -77,7 +77,16 @@ Para comprobar que ha funcionado nuestra carga, solo tenemos que volver a accede
 Para ello creamos un fichero db.php donde tendrá que venir lo siguiente, en nuestro caso para nuestra BB.DD llamada 'botanica':
 
 ```
+<?php
 
+try {
+    $db = new PDO('mysql:host=localhost;dbname=botanica','botanica','botanica');
+}catch(PDOException $e){
+    echo "ERROR:" . $e->getMessage();
+    die();
+}
+
+?>
 ```
 
 ## 5. Creamos el index:
@@ -85,7 +94,19 @@ Para ello creamos un fichero db.php donde tendrá que venir lo siguiente, en nue
 Ahora crearemos el index.php de nuestra pagina en el cual, a parte del html basico, necesitamos agregar lo siguiente en PHP:
 
 ```
+<?php
 
+include('db.php');
+
+$select = $db->prepare("SELECT * FROM botanica");
+$select->execute();
+$rows = $select->fetchAll(PDO::FETCH_ASSOC);
+
+echo "<pre>";
+print_r($rows);
+echo "</pre>";
+
+?>
 ```
 
 ## 
