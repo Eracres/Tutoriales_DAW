@@ -69,6 +69,7 @@ Para comprobar que ha funcionado nuestra carga, solo tenemos que volver a accede
 ### * Acceso a la BB.DD:
     ```
     SELECT * FROM botanica; 
+    
     ```
 ![Base de datos](../../Imagenes/BD4.png)
 
