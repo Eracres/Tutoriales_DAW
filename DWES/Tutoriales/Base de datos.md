@@ -109,7 +109,17 @@ echo "</pre>";
 ?>
 ```
 
-## 
+Junto con el codigo de html basico, sin nada insertado, haremos la comprobacion de lo realizado hasta ahora, que tendrá que quedar así:
+
+## 6. Ejecutarmos el server de php
+
+```
+php -S localhost:8000
+```
+
+Al introducir el enlace en el navegador tendremos lo siguiente:
+
+![Base de datos](../../Imagenes/BD5.png)
 
 NOTA IMPORTANTE: Tener todo instalado correctamente antes:
 
