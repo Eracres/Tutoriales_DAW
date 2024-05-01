@@ -3,13 +3,20 @@
 require('db.php');
 require('config.php');
 
-$select = $db->prepare("SELECT * FROM botanica");
+$count = $db->query("SELECT COUNT(*) FROM botanica");
+//echo "<pre>";
+//print_r($count->fetch());
+//echo "</pre>";
+
+$total = $count->fetch()[0];
+$num_paginas = $total / NUM_POR_PAGINA;
+$primer_elemento_de_pagina = 0;
+
+$select = $db->prepare("SELECT * FROM botanica LIMIT :num_por_pagina OFFSET :desplazamiento");
+$select->bindValue(':num_por_pagina', NUM_POR_PAGINA, PDO::PARAM_INT); 
+$select->bindValue(':desplazamiento', $primer_elemento_de_pagina, PDO::PARAM_INT);
 $select->execute();
 $rows = $select->fetchAll(PDO::FETCH_ASSOC);
-
-echo "<pre>";
-print_r($rows);
-echo "</pre>";
 
 ?>
 <!DOCTYPE html>
