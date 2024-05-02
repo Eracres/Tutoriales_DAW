@@ -73,7 +73,7 @@ Para comprobar que ha funcionado nuestra carga, solo tenemos que volver a accede
     mysql -u botanica -p botanica 
 ```
 ### * Mostrar las tablas:
-```mysql
+```sql
     show tables;
 ```
 ![Base de datos](../../Imagenes/BD3.png)
