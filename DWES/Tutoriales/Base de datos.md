@@ -4,7 +4,7 @@ En este tutorial, vamos a aprender a conectar nuestro proyecto PHP a una base de
 
 ## 1. Creamos nuestro fichero db.sql
 
-```
+```sql
 DROP TABLE IF EXISTS botanica;
 
 CREATE TABLE botanica (
