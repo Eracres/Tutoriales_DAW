@@ -40,7 +40,7 @@ Una vez dentro de la misma, crearemos nuestra BB.DD, el usuario para la gestion 
 en este caso, vamos a llamar a nuestra BB.DD 'botanica', para evitar que se nos olvide daremos el mismo nombre de usuario
 y la misma contraseña, que el nombre de la base de datos:
 
-```
+```sql
 CREATE DATABASE botanica;
 CREATE USER 'botanica'@'localhost' INDENTIFIED BY 'botanica';
 GRANT ALL ON botanica.* TO 'botanica'@'localhost';
@@ -73,13 +73,13 @@ Para comprobar que ha funcionado nuestra carga, solo tenemos que volver a accede
     mysql -u botanica -p botanica 
 ```
 ### * Mostrar las tablas:
-```
+```mysql
     show tables;
 ```
 ![Base de datos](../../Imagenes/BD3.png)
  
 ### * Acceso a la BB.DD:
-```
+```sql
     SELECT * FROM botanica;
 ```
 ![Base de datos](../../Imagenes/BD4.png)
@@ -88,7 +88,7 @@ Para comprobar que ha funcionado nuestra carga, solo tenemos que volver a accede
 
 Para ello creamos un fichero db.php donde tendrá que venir lo siguiente, en nuestro caso para nuestra BB.DD llamada 'botanica':
 
-```
+```php
 <?php
 
 try {
@@ -105,7 +105,7 @@ try {
 
 Ahora crearemos el index.php de nuestra pagina en el cual, a parte del html basico, necesitamos agregar lo siguiente en PHP:
 
-```
+```php
 <?php
 
 include('db.php');
