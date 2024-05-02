@@ -53,7 +53,21 @@ El inicio de nuestro procesado de datos es el botón de enviar, será el inicio 
 ```php
 if (isset($_POST["enviar"])) {
 
-    //Validaciones
+    //Validaciones de errores del formulario
 
 }
 ```
+
+### 2. Validación de errores
+
+En nuestro pseudocodigo hay 2 códigos ligadas a los errores:
+
+- La que detecta el error en un punto ```if there are form errors``` y lo añade a un array de errores
+  ```fill errors array``` en caso contrario ```else``` guerda la información en la base de datos ```record data to database``` y te redirige a una página como comprobante de que no hay errores ```302 regirect, as it required by HTTP standard```
+- La que verifica si hay algún error en las comprobaciones anteriores ```if we have some errors``` te muestra los errores
+  ```display errors``` y te mantiene la información que hallamos introducido correctamente en el formulario ```fill form field values```, finalmente te muestra por pantalla el formulario con la información ```display the form```
+
+Verificaremos esta explicación mediante código
+
+
+
