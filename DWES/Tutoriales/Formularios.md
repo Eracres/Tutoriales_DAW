@@ -48,15 +48,7 @@ Para ello lo veremos poco a poco con nuestro formulario
 ### 1. Enviar
 
 El inicio de nuestro procesado de datos es el botón de enviar, será el inicio de nuestro pseudocódigo, el codigo
-```if the user submited the form``` en PHP se traduce así:
-
-```php
-if (isset($_POST["enviar"])) {
-
-    //Validaciones de errores del formulario
-
-}
-```
+```if the user submited the form``` 
 
 ### 2. Validación de errores
 
@@ -67,7 +59,39 @@ En nuestro pseudocodigo hay 2 códigos ligadas a los errores:
 - La que verifica si hay algún error en las comprobaciones anteriores ```if we have some errors``` te muestra los errores
   ```display errors``` y te mantiene la información que hallamos introducido correctamente en el formulario ```fill form field values```, finalmente te muestra por pantalla el formulario con la información ```display the form```
 
-Verificaremos esta explicación mediante código
+Verificaremos esta explicación mediante código con nuestro formulario:
 
+#### 1. Validacion "Enviar"
+
+Al pulsar el botón enviar, entra dentro de "if" que se encarga de validar el formulario.
+
+```php
+<?php
+    // if the user submited the form
+    if (isset($_POST["enviar"])) {
+
+    }
+?>
+```
+
+#### 2. Validación del "Titulo"
+
+Para ello primero debemos definir un array de errores vacio donde se almacenarán los diferentes errores que podríamos tener y estableceremos las validaciones necesarias para el "Titulo":
+
+```php
+<?php
+    $errores = []; //Array de errores
+    
+    if (isset($_POST["enviar"])) {
+        // if there are form errors
+        if (isset($_POST["titulo"]) && $_POST["titulo"] != "") {
+            //fill errors array
+            $titulo = $_POST["titulo"];
+        } else {
+            $errores["titulo"] = "Este campo es obligatorio";
+        }
+    }
+?>
+```
 
 
