@@ -4,6 +4,8 @@
     $hoy = date("Y");
     $hoy_int = intval($hoy);
     $page_min = 3;
+    define("page_min", 3);
+
 
     $titulo = $_POST['titulo'];
     $autor = $_POST['autor'];
@@ -32,8 +34,12 @@
             $errores["ano"] = "El año es obligatorio";
         }
 
-        if($_POST["paginas"] <= 0 || $_POST['paginas'] === "") {
-            $errores["paginas"] = "Las páginas son obligatorias o tienen que ser mayor que 0";
+        if(isset($paginas) &&  $paginas != "") {
+            if ($paginas < $page_min) {
+                $errores["paginas"] = "El numero de paginas debe de ser mayor a 3";
+            }
+        }else{
+            $errores["paginas"] = "El numero de paginas es obligatorio";
         }
 
         if(empty($errores)){
