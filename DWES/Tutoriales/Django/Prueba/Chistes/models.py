@@ -1,6 +1,6 @@
 from django.db import models
 
-class Chistes(models.Model):
+class Chiste(models.Model):
     titulo = models.TextField(max_length=256)
     cuerpo = models.TextField()
     adultos = models.BooleanField()
