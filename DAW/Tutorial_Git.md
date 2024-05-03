@@ -40,7 +40,9 @@ Explicaremos como realizarlo con diferentes imagener:
 
 * Clonar un repositorio 
 
-``` git clone <URL_del_repositorio> ```
+```git 
+git clone <URL_del_repositorio>
+```
 
 * Inicializar un repositorio de un directorio
 
@@ -77,6 +79,10 @@ Para todo el repositorio:
 * Eliminar una rama
 
 ``` git branch -d <nombre_de_la_rama> ```
+
+* Ver las ramas del repositorio
+
+``` git branch -a ```
 
 * Fusionar cambios de una rama con el main principal
 
