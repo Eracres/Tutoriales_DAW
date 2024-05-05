@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Canción</title>
+    <style>
+        .small-input {
+            height: 12px !important;
+            width: 150px !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Subir Canción</h1>
+    <form method="post" enctype="multipart/form-data" class="formulario">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Subir Canción</button>
+    </form>
+</body>
+</html>
