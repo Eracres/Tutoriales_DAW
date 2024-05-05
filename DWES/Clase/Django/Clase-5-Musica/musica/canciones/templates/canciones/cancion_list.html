@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Canciones</title>
+</head>
+<body>
+    <h1>Listado</h1>
+    <div>
+        <a href="/admin/"><button>Panel de Administración</button></a>
+        <a href="/subir/"><button>Subir Cancion</button></a><br><br>
+        {% for cancion in object_list %}
+        <div>
+            <h5>{{cancion.nombre}} - ({{cancion.artista}}) -> {{cancion.genero}}</h5>
+        </div>
+        {% empty %}
+            <span>No hay canciones cargadas</span>
+        {% endfor %}
+
+        {% if is_paginated %}
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; Primera</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+                {% endif %}
+
+                <span class="current">
+                    Página {{ page_obj.number }} de {{ paginator.num_pages }}.
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+                    <a href="?page={{ paginator.num_pages }}">Última &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
