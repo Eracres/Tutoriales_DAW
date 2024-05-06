@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enviar'])){
 
     if(empty($errores)){
 
-        $insert = $db->prepare("INSERT INTO matches (country, result, score) VALUES (:country, :result, :score)");
+        $insert = $db->prepare("INSERT INTO matche (country, result, score) VALUES (:country, :result, :score)");
         $insert->bindParam(':country', $country);
         $insert->bindParam(':result', $result);
         $insert->bindParam(':score', $score);
@@ -63,20 +63,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enviar'])){
 </head>
 <body>
     <form action="formulario.php" method='post'>
-
+        <h2>Introducir resultado</h2>
+        <br>
         <label for="country">Pais Rival</label>
         <input type="text" name="country" value="<?= isset($country) ? $country : '' ?>">
         <?php if(isset($errores['country'])): ?>
             <br><span class="error"><?= $errores['country'] ?></span>
         <?php endif; ?>
-        <br>
+        <br><br>
         <label for="result">Resultado</label>
         <select name="result" id="">
             <option value="Ganado" <?= isset($result) && $result === 'Ganado' ? 'selected' : '' ?>>Ganado</option>
             <option value="Empate" <?= isset($result) && $result === 'Empate' ? 'selected' : '' ?>>Empate</option>
             <option value="Perdido" <?= isset($result) && $result === 'Perdido' ? 'selected' : '' ?>>Perdido</option>
         </select>
-        <br>
+        <br><br>
         <label for="result_spain">España</label>
         <input type="text" name="result_spain" value="<?= isset($result_spain) ? $result_spain : '' ?>"> - 
         <label for="result_rival">Rival</label>
@@ -84,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enviar'])){
         <?php if(isset($errores['score'])): ?>
             <br><span class="error"><?= $errores['score'] ?></span>
         <?php endif; ?>
-        <br>
+        <br><br>
         <input type="submit" name="enviar" value="Insertar">  
 
     </form>

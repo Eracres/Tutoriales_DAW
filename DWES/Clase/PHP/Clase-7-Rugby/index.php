@@ -3,13 +3,14 @@
 require('db.php');
 require('config.php');
 
-$count = $db->query("SELECT COUNT(*) FROM matches");
+$count = $db->query("SELECT COUNT(*) FROM matche");
 
 $total = $count->fetch()[0];
 $num_page = ceil($total / NUM_POR_PAGINA);
-$first_element = (isset($_GET['page']) && is_numeric($_GET['page'])) ? ($_GET['page'] - 1) * NUM_POR_PAGINA : 0;
+$pagina_actual = isset($_GET['page']) ? intval($_GET['page']) : 1;
+$first_element = ($pagina_actual - 1) * NUM_POR_PAGINA;
 
-$select = $db->prepare("SELECT * FROM matches LIMIT :num_por_pagina OFFSET :desplazamiento");
+$select = $db->prepare("SELECT * FROM matche LIMIT :num_por_pagina OFFSET :desplazamiento");
 $select->bindValue(':num_por_pagina', NUM_POR_PAGINA, PDO::PARAM_INT);
 $select->bindValue(':desplazamiento', $first_element, PDO::PARAM_INT);
 $select->execute();
@@ -60,8 +61,32 @@ $rows = $select->fetchAll(PDO::FETCH_ASSOC);
             <?php endforeach; ?>
         </tbody>
     </table>
-    <?php for($i = 1; $i <= $num_page; $i++): ?>
-        <a href="?page=<?=$i?>"><?=$i?></a>
-    <?php endfor; ?>
+    <div class="pagination">
+        <?php if ($pagina_actual > 1): ?>
+            <a href="?page=1">&lt;&lt;</a> <!-- Doble flecha a la primera página -->
+            <a href="?page=<?=$pagina_actual - 1?>">&lt;</a> <!-- Flecha a la página anterior -->
+        <?php endif; ?>
+        
+        <?php
+            // Lógica para mostrar solo 4 números de página
+            $inicio = max(1, $pagina_actual - 2);
+            $fin = min($inicio + 4, $num_page);
+            if ($inicio > 1) {
+                echo '<span>...</span>';
+            }
+            for($i = $inicio; $i <= $fin; $i++):
+        ?>
+            <a href="?page=<?=$i?>" <?php if ($i == $pagina_actual) echo 'class="active"'; ?>><?=$i?></a> <!-- Números de página -->
+        <?php endfor; ?>
+        
+        <?php if ($fin < $num_page): ?>
+            <span>...</span>
+        <?php endif; ?>
+        
+        <?php if ($pagina_actual < $num_page): ?>
+            <a href="?page=<?=$pagina_actual + 1?>">&gt;</a> <!-- Flecha a la página siguiente -->
+            <a href="?page=<?=$num_page?>">&gt;&gt;</a> <!-- Doble flecha a la última página -->
+        <?php endif; ?>
+    </div>
 </body>
 </html>
