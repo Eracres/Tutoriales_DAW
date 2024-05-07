@@ -1,4 +1,3 @@
-from django.shortcuts import render, redirect
 from django.views import generic
 from .forms import CancionForm
 from .models import Cancion
@@ -10,7 +9,6 @@ class CancionListView(generic.ListView):
     context_object_name = 'canciones'
     paginate_by = 3
 
-
 class SubirCancionView(generic.FormView):
     template_name = 'canciones/subir_cancion.html'
     form_class = CancionForm
@@ -21,4 +19,5 @@ class SubirCancionView(generic.FormView):
     
     def get_success_url(self):
         return reverse_lazy('Canciones:listado') 
+
 
