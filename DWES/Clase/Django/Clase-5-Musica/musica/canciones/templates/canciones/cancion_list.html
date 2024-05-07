@@ -13,6 +13,10 @@
         {% for cancion in object_list %}
         <div>
             <h5>{{cancion.nombre}} - ({{cancion.artista}}) -> {{cancion.genero}}</h5>
+            <audio controls>
+                <source src="{{ cancion.fichero.url }}" type="audio/mp3">
+                Tu navegador no soporta la reproducción de audio.
+            </audio>  
         </div>
         {% empty %}
             <span>No hay canciones cargadas</span>
