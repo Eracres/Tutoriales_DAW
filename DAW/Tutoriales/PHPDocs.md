@@ -70,11 +70,11 @@ php phpDocumentor.phar
 ## Paso 7
 
 ```
-./phpDocumentor.phar run-d ejemplophp/src/ -t ejemplophp/docs/
+./phpDocumentor.phar run -d ejemplophp/src/ -t ejemplophp/docs/
 ```
 
 ## Paso 8
 
 ```
-xdg-open ejemplodocs/docs/index.html
+xdg-open ejemplophp/docs/index.html
 ```
