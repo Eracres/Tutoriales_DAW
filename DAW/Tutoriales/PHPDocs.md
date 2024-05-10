@@ -25,7 +25,7 @@ mkdir src
 
 ## Paso 4
 
-```
+```php
 <?php
 
 /**
