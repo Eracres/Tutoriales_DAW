@@ -73,7 +73,7 @@ php phpDocumentor.phar
 ## Paso 7
 
 ```
-./phpDocumentor.phar run -d ejemplophp/src/ -t ejemplophp/docs/
+./phpDocumentor.phar run -d src/ -t docs/
 ```
 
 ## Paso 8
