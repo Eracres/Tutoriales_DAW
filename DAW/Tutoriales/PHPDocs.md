@@ -28,6 +28,13 @@ wget https://phpdoc.org/phpDocumentor.phar
 
 ## Paso 4
 
+```
+cd src
+sudo nano Perro.php
+```
+
+## Paso 4
+
 ```php
 <?php
 
@@ -79,5 +86,5 @@ php phpDocumentor.phar
 ## Paso 8
 
 ```
-xdg-open ejemplophp/docs/index.html
+xdg-open docs/index.html
 ```
