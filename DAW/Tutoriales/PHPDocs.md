@@ -12,15 +12,18 @@ sudo apt install php-xml
 ## Paso 2
 
 ```
-wget https://phpdoc.org/phpDocumentor.phar
+mkdir ejemplophp
+cd ejemplophp
+mkdir src
+mkdir docs
 ```
+
+
 
 ## Paso 3
 
 ```
-mkdir ejemplophp
-cd ejemplophp
-mkdir src
+wget https://phpdoc.org/phpDocumentor.phar
 ```
 
 ## Paso 4
