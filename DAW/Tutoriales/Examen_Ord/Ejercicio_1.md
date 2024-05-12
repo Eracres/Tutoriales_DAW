@@ -21,13 +21,12 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
 
   Para la modificacion de permisos tenemos que realizar el siguiente comando:
 
-      - Permisos para el host:
+   - Permisos para el host:
 
       ```
       sudo chmod -R 700 /var/www/html
       ```
-      
-      - Permisos para el espacion web:
+   - Permisos para el espacion web:
 
       ```
       <VirtualHost *:80>
@@ -38,7 +37,6 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
           User jdlordinaria
           Group jdlordinaria
       </VirtualHost>
-
       ```
  
   * Crea un espacio web en /var/www/jdlordinaria/t1/e1/ CAPTURA
