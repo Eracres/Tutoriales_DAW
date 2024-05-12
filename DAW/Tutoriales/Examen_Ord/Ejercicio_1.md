@@ -163,6 +163,24 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
       - [Amarillo](amarillo.md)
       ```
       – Mete el mkdoc en la entrega final.
+             
+      Lo llevamos al fichero que tengamos para guardar nuestro proyecto
+
+      ```
+      
+      ```
       – Haz un pantallazo de la página servida con mkdocs
+
+      ```
+      
+      ```
       – Sube al servidor la página construida. CAPTURA
+
+      Usamos el siguiente comando para subir nuestro proyecto al server:
+
+      ```
+      scp -r /var/www/sclordinaria/t1/e1/info/* sergio@scrordinaria.es:/var/www/sclordinaria/t1/e1/info
+      ```
       – Haz un pantallazo de la página funcionando en el servidor.
+
+      Es
