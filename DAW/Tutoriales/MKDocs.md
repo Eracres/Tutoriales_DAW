@@ -43,3 +43,11 @@ cd prueba
 ```
 mkdocs serve
 ```
+
+## IMPORTANTE
+Para ejecuciones desde server, hace falta este codigo:
+Tenemos que especificar la IP que tenemos configurada en el server
+
+```
+mkdocs serve --dev-addr 0.0.0.0:8000
+```
