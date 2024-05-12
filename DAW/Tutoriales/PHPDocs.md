@@ -88,3 +88,13 @@ php phpDocumentor.phar
 ```
 xdg-open docs/index.html
 ```
+
+## IMPORTANTE
+Para ejecuciones desde server, hace falta este codigo:
+Tenemos que especificar la IP que tenemos configurada en el server
+
+```
+python3 -m http.server 8000
+```
+
+En la url tienes que especificar ```http://dirección_del_servidor:8000```
