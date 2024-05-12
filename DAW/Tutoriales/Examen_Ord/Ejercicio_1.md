@@ -21,12 +21,12 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
 
   Para la modificacion de permisos tenemos que realizar el siguiente comando:
 
-   - Permisos para el host:
+   1- Permisos para el host:
 
       ```
       sudo chmod -R 700 /var/www/html
       ```
-   - Permisos para el espacion web:
+   2- Permisos para el espacion web:
 
       ```
       <VirtualHost *:80>
