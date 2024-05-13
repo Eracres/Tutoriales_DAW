@@ -8,4 +8,13 @@ spl_autoload_register(
     }
 );
 
+$db = DWESBaseDatos::obtenerInstancia();
+    $db->inicializa(
+        'autentificacion',
+        'autentificacion',
+        'autentificacion'
+    );
+
+session_start();
+
 ?>

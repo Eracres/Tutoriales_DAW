@@ -2,10 +2,10 @@
 
 require_once('init.php');
 
-if(!isset($_SESSION['user']) || $_SESSION['user'] ==  null){
-    header("Lotacion: login.php");
+if(!isset($_SESSION['user']) || $_SESSION['user'] == null){
+    header("Location: login.php");
     die();
-}
+}   
 
 ?>
 <!DOCTYPE html>
@@ -16,6 +16,9 @@ if(!isset($_SESSION['user']) || $_SESSION['user'] ==  null){
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Bienvenido</h1>
+    <p>
+        Lo que vas a ver te cambiara la vida ... <a href="privada.php">adelante</a>
+    </p>
 </body>
 </html>

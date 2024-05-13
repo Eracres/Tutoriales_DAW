@@ -1,4 +1,4 @@
-Jorge Dueñas Lerín dice:-- Eliminar las tablas is exiten
+-- Eliminar las tablas is exiten
 DROP TABLE IF EXISTS tokens;
 DROP TABLE IF EXISTS usuarios;
 
