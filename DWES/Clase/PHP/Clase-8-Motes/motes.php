@@ -3,6 +3,7 @@ $archivoCSV = 'empleados.csv';
 $archivoJSON = 'empleados.json';
 $errores = [];
 $empleados = [];
+$pos_act = 0;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enviar'])) {
     $nombre = $_POST['nombre'] ?? '';
@@ -22,8 +23,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enviar'])) {
     }
 
     if (empty($errores)) {
-        $empleados[] = ['nombre' => $nombre, 'departamento' => $departamento, 'mote' => $mote];
-        file_put_contents($archivoJSON, json_encode($empleados, JSON_PRETTY_PRINT));
+        if(empty($empleados[$pos_act])){
+            $empleados[] = ['nombre' => $nombre, 'departamento' => $departamento, 'mote' => $mote];
+            $pos_act = 0;
+        }else{
+            $pos_act++;
+            $empleados[$pos_act] = ['nombre' => $nombre, 'departamento' => $departamento, 'mote' => $mote];
+        } 
     }
 }
 
@@ -73,7 +79,7 @@ if (isset($_POST['borrar_lista'])) {
     <br><br>
 
     <label for="departamento">Departamento:</label>
-    <input type="text" id="departamento" name="departamento" name="nombre" <?= isset($departamento) ? $departamento : '' ?>>
+    <input type="text" id="departamento" name="departamento" <?= isset($departamento) ? $departamento : '' ?>>
     <?php
     if ($errores["departamento"]) {
         echo "<span class='error'>" . $errores["departamento"] . "</span>";
@@ -83,7 +89,7 @@ if (isset($_POST['borrar_lista'])) {
     <br><br>
 
     <label for="mote">Mote:</label>
-    <input type="text" id="mote" name="mote" name="nombre" <?= isset($mote) ? $mote : '' ?>>
+    <input type="text" id="mote" name="mote" <?= isset($mote) ? $mote : '' ?>>
     <?php
     if ($errores["mote"]) {
         echo "<span class='error'>" . $errores["mote"] . "</span>";

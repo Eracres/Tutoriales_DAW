@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Memes</title>
+</head>
+<body>
+    <h1>Lista de Memes</h1>
+    <ul>
+        {% for meme in memes %}
+            <li><a href="{% url 'detalle_meme' meme.id %}">{{ meme.descripcion }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
