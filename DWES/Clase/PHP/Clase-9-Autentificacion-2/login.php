@@ -17,11 +17,10 @@ $contrasena = "";
 if(isset($_POST['enviar'])){
 
     //Cargo datos
-    //Verifico errores
     $usuario = isset($_POST['nombre']) ? $_POST['nombre'] : null;
     $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : null;
     
-
+    //Verifico errores
     if(empty($usuario) || empty($contrasena)){
         $errores = "Campos obligatorios"; 
     }
@@ -34,6 +33,7 @@ if(isset($_POST['enviar'])){
         $aAVerificar = $db->obtenDato();
 
         if(password_verify($contrasena, $aAVerificar['pass'])){
+
             $_SESSION['user'] = $aAVerificar['nombre'];
 
             if(isset($_POST['recuerdame'])){
@@ -54,7 +54,6 @@ if(isset($_POST['enviar'])){
             $errores="Credencial incorrecta";
         }
 
-        print_r($db->obtenDatos());
     }
         
 }
