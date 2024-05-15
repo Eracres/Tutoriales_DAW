@@ -51,7 +51,7 @@ if(isset($_POST['enviar'])){
             header("Location: privada.php");
             die();
         }else{
-            $errores[]="Credencial incorrecta";
+            $errores="Credencial incorrecta";
         }
 
         print_r($db->obtenDatos());
@@ -83,7 +83,7 @@ if(isset($_POST['enviar'])){
         <input type="text" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="nombre" id="" placeholder="user" value="<?=$usuario?>"><br><br>
         <input type="password" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="contrasena" id="" placeholder="password"><br><br>
         <?php if(!empty($errores)){?>
-            <span class="error">Credenciales incorrectas</span><br><br>
+            <span class="error"><?php echo $errores ?></span><br><br>
         <?php }?>
         <input type="checkbox" name="recuerdame" id="">Recordar<br><br>
         <input type="submit" name="enviar" value="Login">
