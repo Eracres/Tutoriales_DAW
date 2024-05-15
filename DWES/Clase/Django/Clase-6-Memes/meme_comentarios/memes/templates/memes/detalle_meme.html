@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Meme</title>
+</head>
+<body>
+    <h1>Detalle del Meme</h1>
+    <img src="{{ meme.imagen.url }}" alt="{{ meme.descripcion }}">
+    <p>{{ meme.descripcion }}</p>
+    <h2>Comentarios</h2>
+    <ul>
+        {% for comentario in comentarios %}
+            <li>{{ comentario.texto }} - {{ comentario.nombre_autor }} ({{ comentario.fecha_publicacion|date:"Y-m-d H:i:s" }})</li>
+        {% endfor %}
+    </ul>
+    <h3>Agregar Comentario</h3>
+    <form method="post">
+        {% csrf_token %}
+        <label for="nombre_autor">Nombre:</label><br>
+        <input type="text" id="nombre_autor" name="nombre_autor"><br>
+        <label for="texto">Comentario:</label><br>
+        <textarea id="texto" name="texto"></textarea><br>
+        <input type="submit" value="Comentar">
+    </form>
+</body>
+</html>

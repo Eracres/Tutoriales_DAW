@@ -1,4 +1,29 @@
 <?php
+    
+    $empleados = isset($_POST['empleados']) ? json_decode($_POST['empleados'], true) : [];
+
+    function agregaEmpleado(&$empleados, $nombre, $departamento, $mote){
+        if (empty($empleados)) {
+            $empleados[] = [$nombre, $departamento, $mote];
+        } else {
+            $last_index = count($empleados) - 1;
+            if (empty($empleados[$last_index])) {
+                $empleados[$last_index] = [$nombre, $departamento, $mote];
+            } else {
+                $empleados[] = [$nombre, $departamento, $mote];
+            }
+        }
+    }
+    
+    if (isset($_POST['submit'])) {
+        $nombre = $_POST['nombre'];
+        $departamento = $_POST['departamento'];
+        $mote = $_POST['mote'];
+        
+        agregaEmpleado($empleados, $nombre, $departamento, $mote);
+        
+    }
+    
     if (isset($_POST['guardar_csv'])) {
         // Guardar en CSV
         $empleados = json_decode($_POST['empleados'], true) ?? [];
@@ -45,19 +70,16 @@
 
     <h2>Lista de Empleados</h2>
     <ul>
-        <?php
-        // Mostrar la lista de empleados
-        $empleados = isset($_POST['empleados']) ? $_POST['empleados'] : [];
-        if (isset($_POST['submit'])) {
-            $nombre = $_POST['nombre'];
-            $departamento = $_POST['departamento'];
-            $mote = $_POST['mote'];
-            $empleados[] = [$nombre, $departamento, $mote];
-        }
+        <?php    
+        // Imprimir el contenido del array de empleados
+        echo "<pre>";
+        print_r($empleados);
+        echo "</pre>";
 
         foreach ($empleados as $empleado) {
             echo "<li>$empleado[0] - $empleado[1] - $empleado[2]</li>";
         }
+
         ?>
     </ul>
 
@@ -68,5 +90,7 @@
     </form>
 </body>
 </html>
+
+
 
 
