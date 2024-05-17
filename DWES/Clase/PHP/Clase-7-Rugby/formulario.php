@@ -1,6 +1,7 @@
 <?php
 
 require('db.php');
+require_once('init.php');
 
 $errores = [];
 
@@ -38,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enviar'])){
 
     if(empty($errores)){
 
-        $insert = $db->prepare("INSERT INTO matche (country, result, score) VALUES (:country, :result, :score)");
+        $insert = $db->ejecuta("INSERT INTO matche (country, result, score) VALUES (:country, :result, :score)");
         $insert->bindParam(':country', $country);
         $insert->bindParam(':result', $result);
         $insert->bindParam(':score', $score);
