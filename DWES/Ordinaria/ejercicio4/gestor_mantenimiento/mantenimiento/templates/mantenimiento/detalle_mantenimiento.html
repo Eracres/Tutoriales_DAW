@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'mantenimiento/base.html' %}
+
+    {% block content %}
+    <h1>Detalle del Mantenimiento</h1>
+    <p><strong>Fecha:</strong> {{ mantenimiento.fecha }}</p>
+    <p><strong>Descripción:</strong> {{ mantenimiento.descripcion }}</p>
+    <p><strong>Edificio:</strong> {{ mantenimiento.edificio }}</p>
+    <p><strong>Técnico:</strong> {{ mantenimiento.tecnico }}</p>
+    <a href="{% url 'lista_mantenimientos' %}">Volver al listado de mantenimientos</a>
+    {% endblock %}
+
+</body>
+</html>
