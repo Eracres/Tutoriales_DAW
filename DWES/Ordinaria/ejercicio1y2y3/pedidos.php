@@ -46,7 +46,7 @@ require('db.sql');
         </tr>
     </table>
     <!-- paginación -->
-    <a href="listado.html">Siguiente</a>
+    <a href="pedidos.php">Siguiente</a>
 
     </div>
 </body>
