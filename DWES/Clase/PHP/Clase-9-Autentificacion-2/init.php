@@ -12,9 +12,9 @@ spl_autoload_register(
 
 $db = DWESBaseDatos::obtenerInstancia();
 $db->inicializa(
-    'autentificacion',   //Base de datos 
-    'autentificacion',   //Usuario
-    'autentificacion'    //Contraseña
+    'examen',   //Base de datos 
+    'examen',   //Usuario
+    'examen'    //Contraseña
 );
 
 session_start();

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ obra.titulo }}</title>
+</head>
+<body>
+    <h1>{{ obra.titulo }}</h1>
+    <p>Artista: {{ obra.artista }}</p>
+    <p>Descripción: {{ obra.descripcion }}</p>
+    <p>Fecha de Creación: {{ obra.fecha_creacion }}</p>
+    <p>Precio: {{ obra.precio }}</p>
+    <p>En Venta: {{ obra.en_venta }}</p>
+    {% if obra.imagen %}
+        <img src="{{ obra.imagen.url }}" alt="{{ obra.titulo }}">
+    {% endif %}
+</body>
+</html>
