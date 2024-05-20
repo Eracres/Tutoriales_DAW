@@ -12,7 +12,22 @@ require_once('init.php');
 </head>
 <body>
     <h1>Sistema de gestión de articulos</h1>
-    <a href="login.php">Login</a>
-    <a href="registro.php">Registro</a>
+    <?php if (isset($_SESSION['user'])): ?>
+        <p>Bienvenido, <?= $_SESSION['user'] ?>
+        <form action="articulos.php" method="POST" style="display:inline;">
+            <button type="submit">Ir a articulos</button>
+        </form> 
+        <form action="logout.php" method="POST" style="display:inline;">
+            <button type="submit">Logout</button>
+        </form>
+        </p>
+    <?php else: ?>
+        <form action="login.php" method="POST" style="display:inline;">
+            <button type="submit">Login</button>
+        </form>
+        <form action="registro.php" method="POST" style="display:inline;">
+            <button type="submit">Registro</button>
+        </form>
+    <?php endif; ?>
 </body>
 </html>

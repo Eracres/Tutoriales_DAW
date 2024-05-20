@@ -27,7 +27,7 @@ if(isset($_POST['enviar'])){
         $aAVerificar = $db->ejecuta("SELECT * FROM usuarios WHERE nombre = :id", $usuario);
         $aAVerificar = $db->obtenDato();
 
-        if(password_verify($contrasena, $aAVerificar['pass'])){
+        if(password_verify($contrasena, $aAVerificar['contrasena'])){
 
             $_SESSION['user'] = $aAVerificar['nombre'];
 
@@ -43,7 +43,7 @@ if(isset($_POST['enviar'])){
                 setcookie("RECUERDAME", $token, time()+TIEMPO_RECUERDAME);
             }
             
-            header("Location: registro.php");
+            header("Location: articulos.php");
             die();
         }else{
             $errores="Credencial incorrecta";
@@ -65,7 +65,7 @@ if(isset($_POST['enviar'])){
     <h1>Login</h1>
     <form action=""method="POST">
     <input type="text" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="nombre" id="" placeholder="user" value="<?=$usuario?>"><br><br>
-        <input type="password" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="contrasena" id="" placeholder="password"><br><br>
+    <input type="password" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="contrasena" id="" placeholder="password"><br><br>
         <?php if(!empty($errores)){?>
             <span class="error"><?php echo $errores ?></span><br><br>
         <?php }?>
