@@ -11,7 +11,7 @@ require_once('init.php');
     <title>Registro</title>
 </head>
 <body>
-    <h1>login</h1>
+    <h1>Registrase</h1>
     <form action=""method="POST">
         <input type="text" name="nombre" id="" placeholder="usuario">
         <input type="text" name="contrasenia" id="" placeholder="contraseña">

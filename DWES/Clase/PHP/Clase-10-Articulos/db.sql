@@ -17,4 +17,4 @@ CREATE TABLE usuarios (
     contrasena VARCHAR(255) NOT NULL
 );
 
-INSERT INTO usuarios (nombre, contrasena) VALUES ('Sergio', '1234');
+INSERT INTO usuarios (nombre, contrasena) VALUES ('Sergio', '$2y$10$6EwZm4QoVNZpC3Mv4qY3Q.ttJ9sHvgcIkDeIt902CBIoSL/79Lcx.');

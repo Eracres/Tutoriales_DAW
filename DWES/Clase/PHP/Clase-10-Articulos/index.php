@@ -2,11 +2,6 @@
 
 require_once('init.php');
 
-if(!isset($_SESSION['user']) || $_SESSION['user'] == null){
-    header("Location: login.php");
-    die();
-} 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
