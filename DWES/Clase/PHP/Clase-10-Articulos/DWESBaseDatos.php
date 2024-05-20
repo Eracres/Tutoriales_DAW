@@ -90,6 +90,10 @@ class DWESBaseDatos {
         $this->executed = $this->sentencia->execute($parametros);
     }
 
+    function obtenDato(){
+      return $this->sentencia->fetch();
+    }
+
     function obtenDatos(){
         return $this->sentencia->fetchAll();
     }
