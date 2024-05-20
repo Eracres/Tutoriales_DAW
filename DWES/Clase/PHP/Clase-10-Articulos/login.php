@@ -11,7 +11,6 @@ $errores = [];
 $usuario = "";
 $contrasena = "";
 
-
 if(isset($_POST['enviar'])){
 
     $usuario = isset($_POST['nombre']) ? $_POST['nombre'] : null;
@@ -20,7 +19,6 @@ if(isset($_POST['enviar'])){
     if(empty($usuario) || empty($contrasena)){
         $errores = "Campos obligatorios"; 
     }
-
 
     if(empty($errores)){
        
