@@ -17,9 +17,9 @@ Explicaremos el proceso de instalación de las diferentes herramientas necesaria
 
 ## PHP
 
-### 1. [Formulario Básico Parte 1](/DWES/Tutoriales/PHP/1.%20Formularios%20Básico%201.md)
-### 2. [Formulario Básico Parte 2](/DWES/Tutoriales/PHP/2.%20Formularios%20Básico%202.md)
-### 3. [Formulario Básico Parte 3](/DWES/Tutoriales/PHP/3.%20Formularios%20Básico%203.md)
+### 1. [Formulario Básico Parte 1](/DWES/Tutoriales/PHP/1.%20Formularios%20Básicos%201.md)
+### 2. [Formulario Básico Parte 2](/DWES/Tutoriales/PHP/2.%20Formularios%20Básicos%202.md)
+### 3. [Formulario Básico Parte 3](/DWES/Tutoriales/PHP/3.%20Formularios%20Básicos%203.md)
 ### 4. [POO](/DWES/Tutoriales/PHP/4.%20POO.md)
 ### 5. [Base de datos](/DWES/Tutoriales/PHP/5.%20Base%20de%20datos.md)
 ### 6. [POO](/DWES/Tutoriales/PHP/6.%20Paginación.md)
