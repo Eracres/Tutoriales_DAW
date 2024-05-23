@@ -22,11 +22,11 @@ Explicaremos el proceso de instalación de las diferentes herramientas necesaria
 ### 3. [Formulario Básico Parte 3](/DWES/Tutoriales/PHP/3.%20Formularios%20Básicos%203.md)
 ### 4. [POO](/DWES/Tutoriales/PHP/4.%20POO.md)
 ### 5. [Base de datos](/DWES/Tutoriales/PHP/5.%20Base%20de%20datos.md)
-### 6. [POO](/DWES/Tutoriales/PHP/6.%20Paginación.md)
-### 7. [POO](/DWES/Tutoriales/PHP/7.%20Autentificación.md)
+### 6. [Paginación](/DWES/Tutoriales/PHP/6.%20Paginación.md)
+### 7. [Autentificación](/DWES/Tutoriales/PHP/7.%20Autentificación.md)
 
 ## Django
 
-### 1. [Formulario Básico]()
+### 1. [Creación de Proyecto](/DWES/Tutoriales/Django/1.%20Crear%20Proyecto.md)
 ### 2. [Despliegue con PHPDocs]()
 ### 3. [Despliegue con MKDocs]()
