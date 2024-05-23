@@ -6,7 +6,7 @@ Explicaremos el proceso de instalación de las diferentes herramientas necesaria
 
 ### [1. Git & Github](/DAW/Tutorial_Git.md)
 
-### [2. Despliegue Basido](/DAW/Tutoriales/1.DespliegueBasico.md)
+### [2. Despliegue Basido](/DAW/Tutoriales/1.%Despliegue%Basico.md)
 
 ### [3. Preparar Ubuntu Server & Linux Mint](/DAW/Server&Mint.md)
 
