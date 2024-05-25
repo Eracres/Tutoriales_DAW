@@ -1,5 +1,7 @@
 <?php
 
+define('NUM_POR_PAGINA', 4);
+
 spl_autoload_register(
     function($clase){
         include("$clase.php");
