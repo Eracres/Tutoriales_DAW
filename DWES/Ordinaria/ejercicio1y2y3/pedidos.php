@@ -8,6 +8,12 @@ if (!isset($_SESSION['user'])) {
 }
 
 $sql = "SELECT id, direccion, fecha, unidades FROM pedidos ORDER BY fecha DESC";
+
+$total = $sql->fetch()[0];
+$num_page = ceil($total / NUM_POR_PAGINA);
+$pagina_actual = isset($_GET['page']) ? intval($_GET['page']) : 1;
+$first_element = ($pagina_actual - 1) * NUM_POR_PAGINA;
+
 $db->ejecuta($sql);
 $pedidos = $db->obtenDatos();
 
