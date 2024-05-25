@@ -1,9 +1,15 @@
 <?php
 
 require_once('init.php');
-require('db.sql');
 
+if (!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    exit();
+}
 
+$sql = "SELECT id, direccion, fecha, unidades FROM pedidos ORDER BY fecha DESC";
+$db->ejecuta($sql);
+$pedidos = $db->obtenDatos();
 
 ?>
 <!DOCTYPE html>
@@ -15,39 +21,24 @@ require('db.sql');
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <!-- listado con paginación de siguiente de los pedidos: id, dirección, fecha, unidades -->
-    
     <div id="contenedor">
-    <h1>Listado de pedidos</h1>    
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>Dirección</th>
-            <th>Fecha</th>
-            <th>Unidades</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Avda. de la Constitución, 1</td>
-            <td>2020-12-01</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Avda. de la Constitución, 2</td>
-            <td>2020-12-02</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Avda. de la Constitución, 3</td>
-            <td>2020-12-03</td>
-            <td>15</td>
-        </tr>
-    </table>
-    <!-- paginación -->
-    <a href="pedidos.php">Siguiente</a>
-
+        <h1>Listado de pedidos</h1>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Dirección</th>
+                <th>Fecha</th>
+                <th>Unidades</th>
+            </tr>
+            <?php foreach ($pedidos as $pedido): ?>
+            <tr>
+                <td><?php echo $pedido['id']; ?></td>
+                <td><?php echo $pedido['direccion']; ?></td>
+                <td><?php echo $pedido['fecha']; ?></td>
+                <td><?php echo $pedido['unidades']; ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
     </div>
 </body>
 </html>

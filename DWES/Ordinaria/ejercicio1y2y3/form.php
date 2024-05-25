@@ -1,6 +1,5 @@
 <?php
 
-require ('db.php');
 require_once ('init.php');
 
 $errores = [];
