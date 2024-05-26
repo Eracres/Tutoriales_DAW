@@ -46,46 +46,68 @@ git clone <URL_del_repositorio>
 
 * Inicializar un repositorio de un directorio
 
-``` git init ```
+``` 
+git init
+```
 
 * Agregar cambios al area de preparacion
 
 Para un archivo en concreto:
-``` git add <nombre_del_archivo> ```
+```
+git add <nombre_del_archivo>
+```
 
 Para todo el repositorio:
-``` git add . ```
+``` 
+git add .
+```
 
 * Confirmar los cambios en el repositorio
 
-``` git commit -m "Mensaje del commit" ```
+``` 
+git commit -m "Mensaje del commit"
+```
 
 * Obtener cambios desde el repositorio
 
- ``` git pull origin <nombre_de_la_rama> ``` 
+ ``` 
+ git pull origin <nombre_de_la_rama>
+``` 
 
 * Enviar cambios al repositorio
 
-``` git push origin <nombre_de_la_rama> ```
+``` 
+git push origin <nombre_de_la_rama>
+ ```
   
 * Crear una nueva rama
 
-``` git branch <nombre_de_la_rama> ```
+``` 
+git branch <nombre_de_la_rama>
+```
 
 * Cambiar de rama
 
-``` git checkout <nombre_de_la_rama> ```
+``` 
+git checkout <nombre_de_la_rama>
+```
 
 * Eliminar una rama
 
-``` git branch -d <nombre_de_la_rama> ```
+``` 
+git branch -d <nombre_de_la_rama>
+```
 
 * Ver las ramas del repositorio
 
-``` git branch -a ```
+```
+git branch -a
+```
 
 * Fusionar cambios de una rama con el main principal
 
-``` git merge mi_caracteristica ```
+``` 
+git merge mi_caracteristica
+```
 
 ##
