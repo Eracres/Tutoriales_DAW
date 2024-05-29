@@ -109,6 +109,17 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * [Nocturno](nocturno.md)
 ```
 
+Crear diferentes Markdowns linkados con el index detro de la misma carpeta de docs:
+
+```markdown
+# Sangre
+
+## El vampiro solo bebe sangre
+```
+
+## Paso 6: Crear un usuario y dale permisos para trans: (Server)
+
+
 Entrar en Python3
 ```
 python3
