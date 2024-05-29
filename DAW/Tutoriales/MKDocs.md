@@ -119,6 +119,15 @@ Crear diferentes Markdowns linkados con el index detro de la misma carpeta de do
 
 ## Paso 6: Crear un usuario y dale permisos para trans: (Server)
 
+```
+sudo adduser loquequiera
+cd /var/www/
+sudo chown -R loquequiera:loquequiera /loquequiera
+```
+
+## Paso 7: Entrar en Filezilla y trasnferir los ficheros con el usuario creado: (Cliente)
+
+## Paso 8: Desplegar MKDocs con el nombre del Virtual Host que hemos dado: (Cliente)
 
 Entrar en Python3
 ```
