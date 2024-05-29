@@ -80,7 +80,7 @@ php phpDocumentor.phar
 ## Paso 7
 
 ```
-./phpDocumentor.phar run -d src/ -t docs/
+./phpDocumentor.phar -d src/ -t docs/
 ```
 
 ## Paso 8
