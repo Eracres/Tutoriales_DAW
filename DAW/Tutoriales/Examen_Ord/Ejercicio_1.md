@@ -183,4 +183,35 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
       ```
       – Haz un pantallazo de la página funcionando en el servidor.
 
-      Es
+
+```
+<VirtualHost *:80>
+    ServerName jdlordinaria.t1.e1.es
+    DocumentRoot /var/www/jdlordinaria/t1/e1
+
+    <Directory /var/www/jdlordinaria/t1/e1>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+
+    Alias /info /var/www/jdlordinaria/t1/e1/info
+    <Directory /var/www/jdlordinaria/t1/e1/info>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+
+    Alias /doc /var/www/jdlordinaria/t1/e1/doc
+    <Directory /var/www/jdlordinaria/t1/e1/doc>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/jdlordinaria.t1.e1.es_error.log
+    CustomLog ${APACHE_LOG_DIR}/jdlordinaria.t1.e1.es_access.log combined
+</VirtualHost>
+```
+      
+
