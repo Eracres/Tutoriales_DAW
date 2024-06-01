@@ -117,7 +117,7 @@ Crear diferentes Markdowns linkados con el index detro de la misma carpeta de do
 ## El vampiro solo bebe sangre
 ```
 
-## Paso 6: Crear un usuario y dale permisos para trans: (Server)
+## Paso 6: Crear un usuario y dale permisos para transferir: (Server)
 
 ```
 sudo adduser loquequiera
@@ -126,6 +126,14 @@ sudo chown -R loquequiera:loquequiera /loquequiera
 ```
 
 ## Paso 7: Entrar en Filezilla y trasnferir los ficheros con el usuario creado: (Cliente)
+
+Una vez transferido, debemos ir al fichero donde se encuentra el directorio mkdocs.yml y realizar lo siguiente
+
+```
+sudo mkdocs build
+```
+
+Esto eje
 
 ## Paso 8: Desplegar MKDocs con el nombre del Virtual Host que hemos dado: (Cliente)
 
