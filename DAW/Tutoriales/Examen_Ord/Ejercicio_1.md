@@ -139,7 +139,7 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
     cd /var/www/jdlordinaria/t1/e1/info
     mkdocs new .
     ```
-      – Página rojo, verde y amarillo. Más una página con enlace a ellas.
+      – Página rojo, verde y azul. Más una página con enlace a ellas.
       
       Primero espeficicaremos nuestras paginas en el fichero mldoc.ylm:
 
@@ -155,7 +155,7 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
         - Inicio: index.md
         - Rojo: rojo.md
         - Verde: verde.md
-        - Amarillo: amarillo.md
+        - Azul: azul.md
       ```
 
       A continuación, creamos los Markdown en nuestra carpeta docs desde por ejemplo nuestro IDE o directamente mediante la
@@ -202,16 +202,21 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
              
       Lo llevamos al fichero que tengamos para guardar nuestro proyecto
 
-      ```
-      
-      ```
       – Haz un pantallazo de la página servida con mkdocs
 
+      Para ello la servimos desde el directorio donde nos encontramos:
+     
       ```
-      
+      sudo mkdocs serve 
       ```
       – Sube al servidor la página construida. CAPTURA
 
+      La subimos con Firezilla, necesitaremos dar permisos al usuario desde el server:
+
+      ```
+      sudo chown -R scrordinaria:scrordinaria /scrordinaria
+      ```
+     
       Usamos el siguiente comando para subir nuestro proyecto al server:
 
       ```
