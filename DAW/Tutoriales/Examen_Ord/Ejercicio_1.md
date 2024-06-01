@@ -24,15 +24,15 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
    1- Permisos para el host:
 
    ```
-   sudo chmod -R 700 /var/www/html
+   sudo chmod -R 755 /var/www/scrordinaria/
    ```
    2- Permisos para el espacion web:
 
    ```
       <VirtualHost *:80>
           ServerName jdlordinaria.t1.e1.es
-          DocumentRoot /var/www/jdlordinaria/t1/e1/
-          <Directory /var/www/jdlordinaria/t1/e1/>
+          DocumentRoot /var/www/scrordinaria/t1/e1/
+          <Directory /var/www/scrordinaria/t1/e1/>
               Options Indexes FollowSymLinks
               AllowOverride All
               Require all granted
