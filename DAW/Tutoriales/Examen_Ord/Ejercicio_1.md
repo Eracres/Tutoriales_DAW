@@ -26,18 +26,22 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
    ```
    sudo chmod -R 755 /var/www/scrordinaria/
    ```
-   2- Permisos para el espacion web:
+   2- Permisos para el espacio web:
 
    ```
-      <VirtualHost *:80>
-          ServerName jdlordinaria.t1.e1.es
-          DocumentRoot /var/www/scrordinaria/t1/e1/
-          <Directory /var/www/scrordinaria/t1/e1/>
-              Options Indexes FollowSymLinks
-              AllowOverride All
-              Require all granted
-          </Directory>
-      </VirtualHost>
+   <VirtualHost *:80>
+       ServerName scrordinaria.t1.e1.es
+       DocumentRoot /var/www/scrordinaria/t1/e1
+   
+       <Directory /var/www/scrordinaria/t1/e1>
+           Options Indexes FollowSymLinks
+           AllowOverride None
+           Require all granted
+       </Directory>
+   
+       ErrorLog ${APACHE_LOG_DIR}/jdlordinaria.t1.e1.es_error.log
+       CustomLog ${APACHE_LOG_DIR}/jdlordinaria.t1.e1.es_access.log combined
+   </VirtualHost>
    ```
       
   * Crea un espacio web en /var/www/jdlordinaria/t1/e1/ CAPTURA
@@ -71,7 +75,7 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
       ff02::2 ip6-allrouters
       
       #Host locales
-      172.20.0.2 scrordinaria.es
+      172.20.0.2 scrordinaria.t1.e1.es
     ```
     
   * En él habrá dos directorios: info y doc
@@ -81,6 +85,38 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
     ```
     sudo mkdir /var/www/jdlordinaria/t1/e1/info
     sudo mkdir /var/www/jdlordinaria/t1/e1/doc
+    ```
+
+    Modificamos el fichero de configuración de permisos, adaptandolo a los 2 directorios que creemos:
+
+    ```
+    <VirtualHost *:80>
+        ServerName scrordinaria.t1.e1.es
+        DocumentRoot /var/www/scrordinaria/t1/e1
+    
+        <Directory /var/www/scrordinaria/t1/e1>
+            Options Indexes FollowSymLinks
+            AllowOverride None
+            Require all granted
+        </Directory>
+    
+        Alias /info /var/www/scrordinaria/t1/e1/info/RGB/site/
+        <Directory /var/www/scrordinaria/t1/e1/info/RGB/site/>
+            Options Indexes FollowSymLinks
+            AllowOverride None
+            Require all granted
+        </Directory>
+    
+        Alias /doc /var/www/scrordinaria/t1/e1/doc/docs/
+        <Directory /var/www/scrordinaria/t1/e1/doc/docs/>
+            Options Indexes FollowSymLinks
+            AllowOverride None
+            Require all granted
+        </Directory>
+    
+        ErrorLog ${APACHE_LOG_DIR}/jdlordinaria.t1.e1.es_error.log
+        CustomLog ${APACHE_LOG_DIR}/jdlordinaria.t1.e1.es_access.log combined
+    </VirtualHost>
     ```
     
   * En info habrá un mkdoc con una página por cada color primario: RGB.
@@ -184,35 +220,7 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
       – Haz un pantallazo de la página funcionando en el servidor.
 
 
-```
-<VirtualHost *:80>
-    ServerName scrordinaria.t1.e1.es
-    DocumentRoot /var/www/scrordinaria/t1/e1
 
-    <Directory /var/www/scrordinaria/t1/e1>
-        Options Indexes FollowSymLinks
-        AllowOverride None
-        Require all granted
-    </Directory>
-
-    Alias /info /var/www/scrordinaria/t1/e1/info/RGB/site/
-    <Directory /var/www/scrordinaria/t1/e1/info/RGB/site/>
-        Options Indexes FollowSymLinks
-        AllowOverride None
-        Require all granted
-    </Directory>
-
-    Alias /doc /var/www/scrordinaria/t1/e1/doc/docs/
-    <Directory /var/www/scrordinaria/t1/e1/doc/docs/>
-        Options Indexes FollowSymLinks
-        AllowOverride None
-        Require all granted
-    </Directory>
-
-    ErrorLog ${APACHE_LOG_DIR}/jdlordinaria.t1.e1.es_error.log
-    CustomLog ${APACHE_LOG_DIR}/jdlordinaria.t1.e1.es_access.log combined
-</VirtualHost>
-```
 
 
       
