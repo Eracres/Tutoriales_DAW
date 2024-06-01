@@ -186,24 +186,24 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
 
 ```
 <VirtualHost *:80>
-    ServerName jdlordinaria.t1.e1.es
-    DocumentRoot /var/www/jdlordinaria/t1/e1
+    ServerName scrordinaria.t1.e1.es
+    DocumentRoot /var/www/scrordinaria/t1/e1
 
-    <Directory /var/www/jdlordinaria/t1/e1>
+    <Directory /var/www/scrordinaria/t1/e1>
         Options Indexes FollowSymLinks
         AllowOverride None
         Require all granted
     </Directory>
 
-    Alias /info /var/www/jdlordinaria/t1/e1/info
-    <Directory /var/www/jdlordinaria/t1/e1/info>
+    Alias /info /var/www/scrordinaria/t1/e1/info/RGB/site/
+    <Directory /var/www/scrordinaria/t1/e1/info/RGB/site/>
         Options Indexes FollowSymLinks
         AllowOverride None
         Require all granted
     </Directory>
 
-    Alias /doc /var/www/jdlordinaria/t1/e1/doc
-    <Directory /var/www/jdlordinaria/t1/e1/doc>
+    Alias /doc /var/www/scrordinaria/t1/e1/doc/docs/
+    <Directory /var/www/scrordinaria/t1/e1/doc/docs/>
         Options Indexes FollowSymLinks
         AllowOverride None
         Require all granted
@@ -213,5 +213,7 @@ Vamos ha realizar paso a paso el ejercicio por sus apartados:
     CustomLog ${APACHE_LOG_DIR}/jdlordinaria.t1.e1.es_access.log combined
 </VirtualHost>
 ```
+
+
       
 
