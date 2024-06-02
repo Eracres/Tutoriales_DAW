@@ -1,0 +1,13 @@
+{% if autores %}
+    {% for autor in autores  %}
+        <a href="{%url 'AutorDetail' autor.slug%}"><h2>{{autor.nombre}} {{autor.apellido}}</h2></a>
+    {% endfor %}
+{% else %}
+    <h1>Aun no tienes autores registrados</h1>
+{% endif %}
+
+<form action="{% url 'AutorForm' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Enviar</button>
+</form>

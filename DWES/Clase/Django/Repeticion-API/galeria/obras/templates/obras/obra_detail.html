@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de las obras</title>
+</head>
+<body>
+    {% block title %}Detalle de la Obra{% endblock %}
+
+    {% block content %}
+    <h2>{{ obra.titulo }}</h2>
+    <p>{{ obra.descripcion }}</p>
+    <p>Artista: {{ obra.artista }}</p>
+    <p>Fecha de creación: {{ obra.fecha_creacion }}</p>
+    <p>Precio: {{ obra.precio }}</p>
+    {% if obra.imagen %}
+    <img src="{{ obra.imagen.url }}" alt="{{ obra.titulo }}">
+    {% endif %}
+    {% endblock %}
+</body>
+</html>
