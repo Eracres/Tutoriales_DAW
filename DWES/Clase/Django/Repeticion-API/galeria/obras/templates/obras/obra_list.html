@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Obras</title>
+</head>
+<body>
+
+    {% block title %}Lista de Obras{% endblock %}
+
+    {% block content %}
+    <h2>Lista de Obras</h2>
+    <ul>
+        {% for obra in obras %}
+        <li>
+            <a href="{% url 'obra_detail' slug=obra.slug %}">{{ obra.titulo }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>
