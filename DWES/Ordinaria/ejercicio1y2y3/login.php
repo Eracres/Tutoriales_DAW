@@ -4,14 +4,19 @@ require_once('init.php');
 
 $errores = [];
 $usuario = "";
-$contrasena = "";
+$password = "";
+
+if (isset($_SESSION['user'])) {
+    header('Location: pedidos.php');
+    exit();
+}
 
 if(isset($_POST['enviar'])){
     
     $usuario = isset($_POST['nombre']) ? $_POST['nombre'] : null;
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : null;
+    $password = isset($_POST['password']) ? $_POST['password'] : null;
 
-    if (empty($usuario) || empty($contrasena)){
+    if (empty($usuario) || empty($password)){
         $errores = "Campos obligatorios";
     }
 
@@ -20,7 +25,7 @@ if(isset($_POST['enviar'])){
         $aAVerificar = $db->ejecuta("SELECT * FROM usuarios WHERE nombre = :id", $usuario);
         $aAVerificar = $db->obtenDato();
 
-        if(password_verify($contrasena, $aAVerificar['pass'])){
+        if(password_verify($password, $aAVerificar['pass'])){
 
             $_SESSION['user'] = $aAVerificar['nombre'];
         
@@ -49,11 +54,12 @@ if(isset($_POST['enviar'])){
         <label for="usuario">Usuario</label>
         <input type="text" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="nombre" id="" placeholder="usuario" value="<?=$usuario?>">
         <label for="password">Contraseña</label>
-        <input type="password" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="contrasena" id="" placeholder="contraseña">
+        <input type="password" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="password" id="" placeholder="contraseña">
         <?php if(!empty($errores)){?>
             <span class="error"><?php echo $errores ?></span><br><br>
         <?php }?>
         <input type="submit" name="enviar" value="Enviar">
+        <a href="recupera.php">Recuperar contraseña</a>
     </form>
 
 </body>

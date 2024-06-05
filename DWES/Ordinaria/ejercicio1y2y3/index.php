@@ -1,3 +1,16 @@
+<?php
+    
+    if (isset($_SESSION['user'])) {
+        header('Location: pedidos.php');
+        exit();
+    }
+
+    if (!isset($_SESSION['user'])) {
+        header('Location: login.php');
+        exit();
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +20,6 @@
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <!--formulario de login -->
-    <form action="" method="POST">
-        <label for="usuario">Usuario</label>
-        <input type="text" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="nombre" id="" placeholder="usuario" value="<?=$usuario?>">
-        <label for="password">Contraseña</label>
-        <input type="password" class="<?php echo (!empty($errores)) ? 'error' : ''; ?>" name="contrasena" id="" placeholder="contraseña">
-        <?php if(!empty($errores)){?>
-            <span class="error"><?php echo $errores ?></span><br><br>
-        <?php }?>
-        <input type="submit" name="enviar" value="Enviar">
-    </form>
-
+    <h1>PEDIDOS</h1>
 </body>
 </html>
